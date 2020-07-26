@@ -1,5 +1,5 @@
 # USAGE
-# python encode_faces_sep.py --dataset dataset --encodings encodings.pickle
+# python encode_faces_sep.py --dataset dataset --encodings encodings
 
 # import the necessary packages
 from imutils import paths
@@ -45,7 +45,7 @@ for dir in dirs:
 
         # detect the (x, y)-coordinates of the bounding boxes
         # corresponding to each face in the input image
-        boxes = face_recognition.face_locations(rgb, model=args["detection-method"])
+        boxes = face_recognition.face_locations(rgb, model=args["detection_method"])
 
         # compute the facial embedding for the face
         encodings = face_recognition.face_encodings(rgb, boxes)
